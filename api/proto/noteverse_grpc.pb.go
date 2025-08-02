@@ -4,7 +4,7 @@
 // - protoc             v3.12.4
 // source: api/proto/noteverse.proto
 
-package noteverse
+package proto
 
 import (
 	context "context"
@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	NoteService_CreateNote_FullMethodName = "/noteverse.NoteService/CreateNote"
-	NoteService_GetNote_FullMethodName    = "/noteverse.NoteService/GetNote"
+	NoteService_CreateNote_FullMethodName = "/proto.NoteService/CreateNote"
+	NoteService_GetNote_FullMethodName    = "/proto.NoteService/GetNote"
 )
 
 // NoteServiceClient is the client API for NoteService service.
@@ -142,7 +142,7 @@ func _NoteService_GetNote_Handler(srv interface{}, ctx context.Context, dec func
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var NoteService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "noteverse.NoteService",
+	ServiceName: "proto.NoteService",
 	HandlerType: (*NoteServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

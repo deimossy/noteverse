@@ -4,7 +4,7 @@
 // 	protoc        v3.12.4
 // source: api/proto/noteverse.proto
 
-package noteverse
+package proto
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -285,7 +285,7 @@ var File_api_proto_noteverse_proto protoreflect.FileDescriptor
 
 const file_api_proto_noteverse_proto_rawDesc = "" +
 	"\n" +
-	"\x19api/proto/noteverse.proto\x12\tnoteverse\"\x87\x01\n" +
+	"\x19api/proto/noteverse.proto\x12\x05proto\"\x87\x01\n" +
 	"\x04Note\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x17\n" +
 	"\auser_id\x18\x02 \x01(\tR\x06userId\x12\x18\n" +
@@ -296,17 +296,17 @@ const file_api_proto_noteverse_proto_rawDesc = "" +
 	"updated_at\x18\x05 \x01(\x03R\tupdatedAt\"F\n" +
 	"\x11CreateNoteRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x18\n" +
-	"\acontent\x18\x02 \x01(\tR\acontent\"9\n" +
-	"\x12CreateNoteResponse\x12#\n" +
-	"\x04note\x18\x01 \x01(\v2\x0f.noteverse.NoteR\x04note\")\n" +
+	"\acontent\x18\x02 \x01(\tR\acontent\"5\n" +
+	"\x12CreateNoteResponse\x12\x1f\n" +
+	"\x04note\x18\x01 \x01(\v2\v.proto.NoteR\x04note\")\n" +
 	"\x0eGetNoteRequest\x12\x17\n" +
-	"\anote_id\x18\x01 \x01(\tR\x06noteId\"6\n" +
-	"\x0fGetNoteResponse\x12#\n" +
-	"\x04note\x18\x01 \x01(\v2\x0f.noteverse.NoteR\x04note2\x9a\x01\n" +
-	"\vNoteService\x12I\n" +
+	"\anote_id\x18\x01 \x01(\tR\x06noteId\"2\n" +
+	"\x0fGetNoteResponse\x12\x1f\n" +
+	"\x04note\x18\x01 \x01(\v2\v.proto.NoteR\x04note2\x8a\x01\n" +
+	"\vNoteService\x12A\n" +
 	"\n" +
-	"CreateNote\x12\x1c.noteverse.CreateNoteRequest\x1a\x1d.noteverse.CreateNoteResponse\x12@\n" +
-	"\aGetNote\x12\x19.noteverse.GetNoteRequest\x1a\x1a.noteverse.GetNoteResponseB3Z1github.com/deimossy/noteverse/api/proto/noteverseb\x06proto3"
+	"CreateNote\x12\x18.proto.CreateNoteRequest\x1a\x19.proto.CreateNoteResponse\x128\n" +
+	"\aGetNote\x12\x15.proto.GetNoteRequest\x1a\x16.proto.GetNoteResponseB)Z'github.com/deimossy/noteverse/api/protob\x06proto3"
 
 var (
 	file_api_proto_noteverse_proto_rawDescOnce sync.Once
@@ -322,19 +322,19 @@ func file_api_proto_noteverse_proto_rawDescGZIP() []byte {
 
 var file_api_proto_noteverse_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_api_proto_noteverse_proto_goTypes = []any{
-	(*Note)(nil),               // 0: noteverse.Note
-	(*CreateNoteRequest)(nil),  // 1: noteverse.CreateNoteRequest
-	(*CreateNoteResponse)(nil), // 2: noteverse.CreateNoteResponse
-	(*GetNoteRequest)(nil),     // 3: noteverse.GetNoteRequest
-	(*GetNoteResponse)(nil),    // 4: noteverse.GetNoteResponse
+	(*Note)(nil),               // 0: proto.Note
+	(*CreateNoteRequest)(nil),  // 1: proto.CreateNoteRequest
+	(*CreateNoteResponse)(nil), // 2: proto.CreateNoteResponse
+	(*GetNoteRequest)(nil),     // 3: proto.GetNoteRequest
+	(*GetNoteResponse)(nil),    // 4: proto.GetNoteResponse
 }
 var file_api_proto_noteverse_proto_depIdxs = []int32{
-	0, // 0: noteverse.CreateNoteResponse.note:type_name -> noteverse.Note
-	0, // 1: noteverse.GetNoteResponse.note:type_name -> noteverse.Note
-	1, // 2: noteverse.NoteService.CreateNote:input_type -> noteverse.CreateNoteRequest
-	3, // 3: noteverse.NoteService.GetNote:input_type -> noteverse.GetNoteRequest
-	2, // 4: noteverse.NoteService.CreateNote:output_type -> noteverse.CreateNoteResponse
-	4, // 5: noteverse.NoteService.GetNote:output_type -> noteverse.GetNoteResponse
+	0, // 0: proto.CreateNoteResponse.note:type_name -> proto.Note
+	0, // 1: proto.GetNoteResponse.note:type_name -> proto.Note
+	1, // 2: proto.NoteService.CreateNote:input_type -> proto.CreateNoteRequest
+	3, // 3: proto.NoteService.GetNote:input_type -> proto.GetNoteRequest
+	2, // 4: proto.NoteService.CreateNote:output_type -> proto.CreateNoteResponse
+	4, // 5: proto.NoteService.GetNote:output_type -> proto.GetNoteResponse
 	4, // [4:6] is the sub-list for method output_type
 	2, // [2:4] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
