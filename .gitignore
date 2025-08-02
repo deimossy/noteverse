@@ -1,0 +1,46 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Go build outputs
+bin/
+*.exe
+
+# Vendor dependencies
+vendor/
+
+# Go modules cache
+.modcache/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Docker
+docker-compose.override.yml
+.env
+
+# IDE
+.idea/
+.vscode/
+!/.vscode/settings.json
+!/.vscode/tasks.json
+!/.vscode/launch.json
+!/.vscode/extensions.json
+!/.vscode/*.code-snippets
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+out/
+
+# Local history
+.history/
+
+# Test result files
+coverage.out
+
+# Temporary files
+*.swp
+*~
