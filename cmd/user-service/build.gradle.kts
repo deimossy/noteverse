@@ -33,6 +33,8 @@ dependencies {
     testImplementation("org.springframework.grpc:spring-grpc-test")
     testImplementation("org.springframework.security:spring-security-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    implementation("org.projectlombok:lombok:0.11.0")
 }
 
 dependencyManagement {
